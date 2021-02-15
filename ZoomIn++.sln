@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZoomIn++", "ZoomIn++.vcxproj", "{83A99574-32F2-43D9-A124-C7BE48CD7776}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{FE13F1B4-606E-4148-BCB3-5C14887C2622}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Archive\Windows Apps\ZoomIn++\ZoomIn++ Archives.txt = ..\..\..\Archive\Windows Apps\ZoomIn++\ZoomIn++ Archives.txt
+		Notes\ZoomIn++ Readme.txt = Notes\ZoomIn++ Readme.txt
+		Notes\ZoomIn++ Tasks.txt = Notes\ZoomIn++ Tasks.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83A99574-32F2-43D9-A124-C7BE48CD7776}.Debug|Win32.ActiveCfg = Debug|Win32
+		{83A99574-32F2-43D9-A124-C7BE48CD7776}.Debug|Win32.Build.0 = Debug|Win32
+		{83A99574-32F2-43D9-A124-C7BE48CD7776}.Release|Win32.ActiveCfg = Release|Win32
+		{83A99574-32F2-43D9-A124-C7BE48CD7776}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

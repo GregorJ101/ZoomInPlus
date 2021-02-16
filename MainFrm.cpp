@@ -1110,6 +1110,11 @@ void CMainFrame::OnSaveSettingsInRegistry ()
 void CMainFrame::OnRestoreSavedSettings ()
 {
     m_settings.Load (m_cstrCaption);
+    CPoint ptWindowTopLeft;
+    CSize szWindowSize;
+    m_settings.GetWindowPos (ptWindowTopLeft, szWindowSize);
+    SetWindowPos (&wndTopMost, ptWindowTopLeft.x, ptWindowTopLeft.y, szWindowSize.cx, szWindowSize.cy, SWP_NOZORDER | SWP_SHOWWINDOW);
+    DoTheZoom ();
 }
 
 //***********************************************

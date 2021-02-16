@@ -1,0 +1,270 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\ZoomIn++.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endi\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\ZoomIn++.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&Image"
+    BEGIN
+        MENUITEM "&Save\tCtrl+S",                             ID_FILE_SAVE
+        MENUITEM "&Copy\tCtrl+C",                             ID_EDIT_COPY
+        MENUITEM "&Refresh\tF5",                              ID_MENU_REFRESH
+        MENUITEM SEPARATOR
+        MENUITEM "S&ave Current Settings in Registry",        ID_SAVE_SETTINGS_IN_REGISTRY
+        MENUITEM "Res&tore Saved Settings"                    ID_RESTORE_SAVED_SETTINGS
+        MENUITEM "&Delete Settings",                          ID_DELETE_SETTINGS
+        MENUITEM "C&opy Command-Line Arguments to Clipboard", ID_COPY_ARGUMENTS_TO_CLIPBOARD
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Refresh Rate...",                          ID_MENU_REFRESH_RATE
+        POPUP "&Grid"
+        BEGIN
+            MENUITEM "&View Grid",                            ID_MENU_GRID
+            MENUITEM "I&nverted Grid",                        ID_MENU_NEGATIVE_GRID
+        END
+        MENUITEM "Show Screen &Coordinates",                  ID_MENU_ABSOLUTE_NUMBERING
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Settings on Exit",                    ID_MENU_SAVE_SETTINGS
+        MENUITEM "Start &Window Minimized",                   ID_START_WINDOW_MINIMIZED
+        MENUITEM "&Use Selection Rectangle",                  ID_USE_SELECTION_RECTANGLE
+        MENUITEM "R&ecursive Magnification",                  ID_RECURSIVE_MAGNIFICATION
+        MENUITEM SEPARATOR
+        MENUITEM "&Minimize to Tray",                         ID_MENU_MINIMIZETOTRAY
+        MENUITEM "Always on &Top",                            ID_MENU_ALWAYSONTOP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ZoomIn++...",                        ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP MENU
+BEGIN
+    POPUP "_SYSTRAY_"
+    BEGIN
+        MENUITEM "&Restore",                                  ID_MENU_RESTORE
+        MENUITEM "&Close",                                    ID_MENU_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F5,          ID_MENU_REFRESH,        VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 211, 65
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "About ZoomIn++"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,10,20,20
+    LTEXT           "ZoomIn++ version 2.4.0.00",IDC_STATIC,40,10,125,9,SS_NOPREFIX
+    LTEXT           "Copyright (c) 2002  Brian Friesen",IDC_STATIC,40,23,125,11,SS_NOPREFIX
+    LTEXT           "",IDC_STATIC_BUILD,40,36,125,20,SS_NOPREFIX
+    LTEXT           "https://github.com/GregorJ101/ZoomInPlus",IDC_STATIC_URL,
+                    40,49,160,8
+    DEFPUSHBUTTON   "OK",IDOK,175,10,30,14,WS_GROUP
+END
+
+IDD_REFRESH_RATE DIALOGEX 0, 0, 212, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Refresh Rate"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    CONTROL         "&Enable Auto Refresh",IDC_CHECK_AUTO_REFRESH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,5,110,10
+    LTEXT           "&Interval (Tenths of Seconds):",IDC_STATIC_MSG,22,20,93,8
+    EDITTEXT        IDC_EDIT_REFRESH_RATE,115,18,30,14,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_REFRESH_RATE,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,145,17,9,14
+    DEFPUSHBUTTON   "OK",IDOK,165,5,40,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,25,40,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 2,4,0,0
+ PRODUCTVERSION 2,4,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Freezerware"
+            VALUE "FileDescription", "Screen Magnification Viewer"
+            VALUE "FileVersion", "2.4.0.00"
+            VALUE "InternalName", "ZoomIn++"
+            VALUE "LegalCopyright", "Copyright (c) 2002  Brian Friesen"
+            VALUE "OriginalFilename", "ZoomIn++.exe"
+            VALUE "ProductName", "ZoomIn++ Application"
+            VALUE "ProductVersion", "2.4.0.00"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_HYPERLINK           CURSOR                  "res\\hyperlink.cur"
+IDC_RUDE_HYPERLINK      CURSOR                  "res\\RudeHyperLink.cur"
+IDC_CROSSHAIR_CUR       CURSOR                  "res\\MyCrosshair.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "ZoomIn++\n\nZoomIn++\n\n\nZoomIn++.Document\nZoomIn++ Document"
+    ID_INDICATOR_ZOOM       " "
+    ID_INDICATOR_CURSOR     " "
+    ID_INDICATOR_RGB        " "
+    IDS_SYSTRAY_TIP         "ZoomIn++"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\ZoomIn++.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -86,7 +86,7 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ZoomIn.rc">
+    <ResourceCompile Include="ZoomIn++.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>

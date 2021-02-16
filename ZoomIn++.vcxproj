@@ -127,7 +127,7 @@
     <ClCompile Include="ZoomIn++.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="ZoomIn.rc" />
+    <ResourceCompile Include="ZoomIn++.rc" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\ZoomIn++.ico" />

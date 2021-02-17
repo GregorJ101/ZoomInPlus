@@ -1114,7 +1114,6 @@ void CMainFrame::OnRestoreSavedSettings ()
     CSize szWindowSize;
     m_settings.GetWindowPos (ptWindowTopLeft, szWindowSize);
     SetWindowPos (&wndTopMost, ptWindowTopLeft.x, ptWindowTopLeft.y, szWindowSize.cx, szWindowSize.cy, SWP_NOZORDER | SWP_SHOWWINDOW);
-    DoTheZoom ();
 }
 
 //***********************************************
